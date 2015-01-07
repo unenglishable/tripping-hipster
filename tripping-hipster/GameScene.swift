@@ -9,14 +9,22 @@
 import SpriteKit
 
 class GameScene: SKScene {
+    let keyboard = ["a", "b", "c", "d", "e"]
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
+        let myLabel = SKLabelNode(fontNamed:"Arial")
         myLabel.text = "Hello, World!";
         myLabel.fontSize = 65;
         myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
         
         self.addChild(myLabel)
+        
+        for counter in 0...6 {
+            
+            keyboardLetterGen(CGPoint(x:55*CGFloat(counter),y:CGFloat(100)))
+            keyboardLetterGen(CGPoint(x:55*CGFloat(counter),y:CGFloat(0)))
+        }
+
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
@@ -41,5 +49,13 @@ class GameScene: SKScene {
    
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
+    }
+    func keyboardLetterGen (location:CGPoint) {
+        let keyboardNode = SKLabelNode(fontNamed:"Arial")
+        keyboardNode.text = keyboard[Int(arc4random_uniform(5))];
+        keyboardNode.fontSize = 50;
+        keyboardNode.position = CGPoint(x: CGRectGetWidth(self.frame)/3 + location.x, y: CGRectGetHeight(self.frame)/15+location.y);
+        self.addChild(keyboardNode)
+
     }
 }
