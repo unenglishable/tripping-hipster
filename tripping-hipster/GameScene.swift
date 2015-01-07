@@ -11,12 +11,19 @@ import SpriteKit
 class GameScene: SKScene {
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "Hello, World!";
+        let myLabel = SKLabelNode(fontNamed:"Courier New")
+        myLabel.text = "Game Over";
         myLabel.fontSize = 65;
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
+        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetHeight(self.frame)*3/4);
         
         self.addChild(myLabel)
+        
+        let gameOver = SKLabelNode(fontNamed:"Courier New")
+        gameOver.text = "You Lose!"+"\(CGRectGetHeight(self.frame)) "+"\(CGRectGetWidth(self.frame))";
+        gameOver.fontSize = 15;
+        gameOver.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetHeight(self.frame)/2);
+        
+        self.addChild(gameOver)
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
