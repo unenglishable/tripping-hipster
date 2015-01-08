@@ -13,8 +13,10 @@ class GameScene: SKScene {
     // MARK:  - Setup constants
     // keyboard dictionary
     //let keyboard = ["¯", "\\", "_", "(", "ツ", ")","_","/","¯"]
-    let keyboard = ["a", "b", "c", "d", "e","f", "g"]
+    let keyboard1 = ["a", "b", "c", "d", "e","f", "g"]
+    let emoji = ["(;¬_¬)","( ≧Д≦)", "(；￣Д￣）"]
     let myLabel = SKLabelNode(fontNamed:"Arial")
+    let myLabel1 = SKLabelNode(fontNamed:"Arial")
     
     let carSize = CGSize(width:200, height:100)
     let carName = "car"
@@ -22,18 +24,30 @@ class GameScene: SKScene {
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
         
-        myLabel.text = "Hello, World! ";
-        myLabel.fontSize = 20;
+        myLabel.text = "";
+        myLabel.fontSize = 50;
         myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
         
         self.addChild(myLabel)
         
+        var emojiIndex = Int(arc4random_uniform(UInt32(emoji.count)))
+        
+        myLabel1.text = emoji[emojiIndex];
+        myLabel1.fontSize = 50;
+        myLabel1.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame)-70);
+        
+        self.addChild(myLabel1)
+        
+        
+        
         for counter in 0...6 {
             // generate keyboard with two rows
-            keyboardLetterGen(CGPoint(x:55*CGFloat(counter),y:CGFloat(100)))
-            keyboardLetterGen(CGPoint(x:55*CGFloat(counter),y:CGFloat(0)))
+            keyboardLetterGen(CGPoint(x:55*CGFloat(counter),y:CGFloat(100)), emojiIndex: emojiIndex)
+            keyboardLetterGen(CGPoint(x:55*CGFloat(counter),y:CGFloat(0)), emojiIndex: emojiIndex)
         }
         setupCar()  // generate car
+        
+        
 
     }
     // MARK: Touch Setup
@@ -58,10 +72,12 @@ class GameScene: SKScene {
     }
     
     // MARK: Sprite Setup
-    func keyboardLetterGen (location:CGPoint) {
+    func keyboardLetterGen (location:CGPoint, emojiIndex:Int) {
+        var emojiChar = Array(emoji[emojiIndex])
+        
         let keyboardNode = SKLabelNode(fontNamed:"Arial")
         keyboardNode.name = "keyboardNode"
-        keyboardNode.text = keyboard[Int(arc4random_uniform(UInt32(keyboard.count)))];
+        keyboardNode.text = "\(emojiChar[Int(arc4random_uniform(UInt32(emojiChar.count)))])";
         keyboardNode.fontSize = 50;
         keyboardNode.position = CGPoint(x: CGRectGetWidth(self.frame)/3 + location.x, y: CGRectGetHeight(self.frame)/15+location.y);
         self.addChild(keyboardNode)
