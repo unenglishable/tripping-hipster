@@ -29,6 +29,9 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
 
         if let scene = GameScene.unarchiveFromFile("GameScene") as? GameScene {
             // Configure the view.

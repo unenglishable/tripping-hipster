@@ -413,6 +413,7 @@
 				E8B697E91A5D1654001DF495 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E8B697EA1A5D1654001DF495 /* Build configuration list for PBXNativeTarget "tripping-hipsterTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +422,7 @@
 				E8B697EC1A5D1654001DF495 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
