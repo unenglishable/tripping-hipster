@@ -167,9 +167,11 @@
 				TargetAttributes = {
 					E8B697C31A5D1654001DF495 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = QW9239USZ5;
 					};
 					E8B697DC1A5D1654001DF495 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = QW9239USZ5;
 						TestTargetID = E8B697C31A5D1654001DF495;
 					};
 				};
@@ -364,6 +366,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -375,6 +379,7 @@
 				INFOPLIST_FILE = "tripping-hipsterTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tripping-hipster.app/tripping-hipster";
 			};
 			name = Debug;
@@ -383,6 +388,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -390,6 +397,7 @@
 				INFOPLIST_FILE = "tripping-hipsterTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tripping-hipster.app/tripping-hipster";
 			};
 			name = Release;
