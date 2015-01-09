@@ -16,6 +16,7 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
+tripping-hipster/Images.xcassets/AppIcon.appiconset/*.png
 
 # CocoaPods
 #
