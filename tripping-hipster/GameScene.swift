@@ -29,7 +29,7 @@ class GameScene: SKScene {
     // MARK:  - Setup constants
     // keyboard dictionary
     let keyboardNumberOfChars = 9
-    let emoji = ["(;¬_¬)","( ≧Д≦)", "(；￣Д￣）"]
+    let emoji = ["(;¬_¬)","( ≧Д≦)", "(；￣Д￣）","((╬ಠิ﹏ಠิ))"]
     let usersEmoji = SKLabelNode(fontNamed:"Arial")
     let emojiDisplay = SKLabelNode(fontNamed:"Arial")
     
@@ -50,8 +50,7 @@ class GameScene: SKScene {
         
         self.addChild(usersEmoji)
         
-        //var emojiIndex = Int(arc4random_uniform(UInt32(emoji.count)))
-        let emojiIndex = 2
+        var emojiIndex = Int(arc4random_uniform(UInt32(emoji.count)))
         
         emojiDisplay.text = emoji[emojiIndex];
         emojiDisplay.fontSize = 40;
@@ -83,6 +82,10 @@ class GameScene: SKScene {
             if touchNode.name == "keyboardBox" {
                 println(touchNode.accessibilityLabel)
                 usersEmoji.text = usersEmoji.text+touchNode.accessibilityLabel
+            }
+            if usersEmoji.text == emojiDisplay.text {
+                usersEmoji.text = ""
+                emojiDisplay.text = emoji[Int(arc4random_uniform(UInt32(emoji.count)))];
             }
         }
     }
@@ -127,7 +130,7 @@ class GameScene: SKScene {
             
             let keyboardNode = SKLabelNode(fontNamed:"Courier New")
             keyboardNode.name = "keyboardNode"
-            keyboardNode.fontSize = 50;
+            keyboardNode.fontSize = 40;
             keyboardNode.text = "\(keyboardPosition[randomOrder[i]]!)"  // give node a char from the dict
             keyboardNode.position = CGPoint(x: CGFloat(i%5+1)*CGRectGetWidth(self.frame)/6, y: CGRectGetHeight(self.frame)/15 + (i<5 ? 0:100));
             self.addChild(keyboardNode)
@@ -137,7 +140,7 @@ class GameScene: SKScene {
             let keyboardBox = SKShapeNode(rectOfSize: CGSize(width:50, height:50))
             keyboardBox.name = "keyboardBox"
             keyboardBox.accessibilityLabel = keyboardNode.text
-            keyboardBox.position = keyboardNode.position + CGPoint(x:0.0, y:10.0)
+            keyboardBox.position = keyboardNode.position + CGPoint(x:0.0, y:12.0)
             self.addChild(keyboardBox)
         }
 
