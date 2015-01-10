@@ -30,6 +30,9 @@ class GameViewController: UIViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "handleApplicationWillResignActive:", name: UIApplicationWillResignActiveNotification, object: nil)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "handleApplicationDidBecomeActive:", name: UIApplicationDidBecomeActiveNotification, object: nil)
+        
+        /* Set the scale mode to scale to fit the window */
+        scene.scaleMode = .ResizeFill
     }
     
     override func shouldAutorotate() -> Bool {
