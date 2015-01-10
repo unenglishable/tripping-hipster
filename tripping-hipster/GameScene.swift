@@ -29,7 +29,7 @@ class GameScene: SKScene {
     // MARK:  - Setup constants
     // keyboard dictionary
     let keyboardNumberOfChars = 9
-    let emoji = ["(;¬_¬)","( ≧Д≦)", "(；￣Д￣）","((╬ಠิ﹏ಠิ))"]
+    let emoji = ["(;¬_¬)","( ≧Д≦)", "(；￣Д￣）","((╬ಠิ﹏ಠิ))","ಠ_ರೃ"]
     let usersEmoji = SKLabelNode(fontNamed:"Arial")
     let emojiDisplay = SKLabelNode(fontNamed:"Arial")
     
@@ -85,7 +85,15 @@ class GameScene: SKScene {
             }
             if usersEmoji.text == emojiDisplay.text {
                 usersEmoji.text = ""
-                emojiDisplay.text = emoji[Int(arc4random_uniform(UInt32(emoji.count)))];
+                var randIndex = Int(arc4random_uniform(UInt32(emoji.count)))
+                emojiDisplay.text = emoji[randIndex];
+                // delete and create new keyboard
+                for child in self.children as [SKNode] {
+                    if (child.name == "keyboardNode" || child.name == "keyboardBox") {
+                        self.removeChildrenInArray([child])
+                    }
+                }
+                keyboardLetterGen(randIndex)
             }
         }
     }
@@ -97,17 +105,12 @@ class GameScene: SKScene {
     
     func processUserMotionForUpdate(currentTime: CFTimeInterval) {
         
-        // 1
+        // apply force when acceleration detected in x direction
         let car = childNodeWithName(carName) as SKSpriteNode
-        
-        // 2
         if let data = motionManager.accelerometerData {
-            
-            // 3
             if (fabs(data.acceleration.x) > 0.2) {
                 // move ship
                 car.physicsBody!.applyForce(CGVectorMake(40.0 * CGFloat(data.acceleration.x), 0))
-                
             }
         }
     }
@@ -120,7 +123,7 @@ class GameScene: SKScene {
             keyboardPosition[i] = "\(emojiChar[i])"
         }
         for i in emojiChar.count...keyboardNumberOfChars {  // fill rest of dict with repeat chars
-            keyboardPosition[i] = "\(emojiChar[Int(arc4random_uniform(UInt32(emoji.count)))])"
+            keyboardPosition[i] = "\(emojiChar[Int(arc4random_uniform(UInt32(emojiChar.count)))])"
         }
         
         var randomOrder = Array(0...9)
