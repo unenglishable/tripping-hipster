@@ -29,14 +29,17 @@ class GameScene: SKScene {
     // MARK:  - Setup constants
     // keyboard dictionary
     let keyboardNumberOfChars = 9
-    let emoji = ["(;¬_¬)","( ≧Д≦)", "(；￣Д￣）","((╬ಠิ﹏ಠิ))","ಠ_ರೃ"]
+    let emoji = ["(;¬_¬)","( ≧Д≦)", "(；￣Д￣）","((╬ಠิ﹏ಠิ))","ಠ_ರೃ","(ノ#-_-)ノ"]
     let usersEmoji = SKLabelNode(fontNamed:"Arial")
     let emojiDisplay = SKLabelNode(fontNamed:"Arial")
+    let scoreBoard = SKLabelNode(fontNamed: "Arial")
     
-    let carSize = CGSize(width:70, height:90)
+    let carSize = CGSize(width:60, height:70)
     let carName = "car"
     
     let motionManager: CMMotionManager = CMMotionManager()
+    
+    var scoreCount = 0
     
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
@@ -44,19 +47,14 @@ class GameScene: SKScene {
         // setup physics body of GameScene itself
         self.physicsBody = SKPhysicsBody(edgeLoopFromRect: frame)
         
-        usersEmoji.text = "";
-        usersEmoji.fontSize = 40;
-        usersEmoji.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
+         var emojiIndex = Int(arc4random_uniform(UInt32(emoji.count)))
         
-        self.addChild(usersEmoji)
-        
-        var emojiIndex = Int(arc4random_uniform(UInt32(emoji.count)))
-        
-        emojiDisplay.text = emoji[emojiIndex];
-        emojiDisplay.fontSize = 40;
-        emojiDisplay.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame)-80);
-        
-        self.addChild(emojiDisplay)
+        // create area for user to type
+        makeUserTextField()
+        // create display emoji
+        makeEmojiDisplay(emojiIndex)
+        // create scoreboard
+        makeScoreBoard()
         
         // create keyboard
         keyboardLetterGen(emojiIndex)
@@ -83,10 +81,13 @@ class GameScene: SKScene {
                 println(touchNode.accessibilityLabel)
                 usersEmoji.text = usersEmoji.text+touchNode.accessibilityLabel
             }
+            
+            // test when user completes emoji correctly
             if usersEmoji.text == emojiDisplay.text {
                 usersEmoji.text = ""
                 var randIndex = Int(arc4random_uniform(UInt32(emoji.count)))
                 emojiDisplay.text = emoji[randIndex];
+                
                 // delete and create new keyboard
                 for child in self.children as [SKNode] {
                     if (child.name == "keyboardNode" || child.name == "keyboardBox") {
@@ -94,6 +95,13 @@ class GameScene: SKScene {
                     }
                 }
                 keyboardLetterGen(randIndex)
+                scoreCount++
+                scoreBoard.text = "\(scoreCount)"
+                if scoreCount > 2 {
+                    let reveal = SKTransition.flipHorizontalWithDuration(0.5)
+                    let gameOverScene = GameOverScene(size: self.size, won: true)
+                    self.view?.presentScene(gameOverScene, transition: reveal)
+                }
             }
         }
     }
@@ -135,7 +143,7 @@ class GameScene: SKScene {
             keyboardNode.name = "keyboardNode"
             keyboardNode.fontSize = 40;
             keyboardNode.text = "\(keyboardPosition[randomOrder[i]]!)"  // give node a char from the dict
-            keyboardNode.position = CGPoint(x: CGFloat(i%5+1)*CGRectGetWidth(self.frame)/6, y: CGRectGetHeight(self.frame)/15 + (i<5 ? 0:100));
+            keyboardNode.position = CGPoint(x: CGFloat(i%5+1)*CGRectGetWidth(self.frame)/6, y: CGRectGetHeight(self.frame)/15 + (i<5 ? 0:70));
             self.addChild(keyboardNode)
 
             
@@ -155,6 +163,30 @@ class GameScene: SKScene {
         // position and add car
         car.position = CGPoint(x:size.width / 2.0, y:CGRectGetMidY(self.frame)+100)
         addChild(car)
+    }
+    func makeUserTextField() {
+        usersEmoji.text = "";
+        usersEmoji.fontSize = 40;
+        usersEmoji.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
+        
+        self.addChild(usersEmoji)
+
+    }
+    func makeScoreBoard() {
+        scoreBoard.text = "0";
+        scoreBoard.fontSize = 30;
+        scoreBoard.fontColor = SKColor.redColor()
+        scoreBoard.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame)-140);
+        
+        self.addChild(scoreBoard)
+        
+    }
+    func makeEmojiDisplay(emojiIndex:Int) {
+        emojiDisplay.text = emoji[emojiIndex];
+        emojiDisplay.fontSize = 40;
+        emojiDisplay.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame)-80);
+        
+        self.addChild(emojiDisplay)
     }
     
     func makeCar() -> SKNode {
