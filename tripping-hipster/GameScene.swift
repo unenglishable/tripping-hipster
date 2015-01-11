@@ -40,6 +40,7 @@ class GameScene: SKScene {
     let motionManager: CMMotionManager = CMMotionManager()
     
     var scoreCount = 0
+    var charCount = 0
     
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
@@ -47,7 +48,7 @@ class GameScene: SKScene {
         // setup physics body of GameScene itself
         self.physicsBody = SKPhysicsBody(edgeLoopFromRect: frame)
         
-         var emojiIndex = Int(arc4random_uniform(UInt32(emoji.count)))
+        var emojiIndex = Int(arc4random_uniform(UInt32(emoji.count)))
         
         // create area for user to type
         makeUserTextField()
@@ -80,6 +81,19 @@ class GameScene: SKScene {
             if touchNode.name == "keyboardBox" {
                 println(touchNode.accessibilityLabel)
                 usersEmoji.text = usersEmoji.text+touchNode.accessibilityLabel
+                
+                var emojiChar = Array(emojiDisplay.text)  //ensure user is typing right character
+                println(emojiChar[charCount])
+                if (touchNode.accessibilityLabel != "\(emojiChar[charCount])") {
+                    let reveal = SKTransition.flipHorizontalWithDuration(0.5)
+                    let gameOverScene = GameOverScene(size: self.size, won: false)
+                    self.view?.presentScene(gameOverScene, transition: reveal)
+                }
+                else {
+                    charCount++
+                    println(charCount)
+                }
+
             }
             
             // test when user completes emoji correctly
@@ -95,7 +109,8 @@ class GameScene: SKScene {
                     }
                 }
                 keyboardLetterGen(randIndex)
-                scoreCount++
+                scoreCount++  // increment score
+                charCount = 0 // reset character counter
                 scoreBoard.text = "\(scoreCount)"
                 if scoreCount > 2 {
                     let reveal = SKTransition.flipHorizontalWithDuration(0.5)
@@ -176,7 +191,7 @@ class GameScene: SKScene {
         scoreBoard.text = "0";
         scoreBoard.fontSize = 30;
         scoreBoard.fontColor = SKColor.redColor()
-        scoreBoard.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame)-140);
+        scoreBoard.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame)-130);
         
         self.addChild(scoreBoard)
         
