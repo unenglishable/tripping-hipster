@@ -1,442 +1,991 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		0C3995FC1A621C3D00D4D89D /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3995FB1A621C3D00D4D89D /* GameOverScene.swift */; };
-		E8B697CA1A5D1654001DF495 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B697C91A5D1654001DF495 /* AppDelegate.swift */; };
-		E8B697CC1A5D1654001DF495 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E8B697CB1A5D1654001DF495 /* GameScene.sks */; };
-		E8B697CE1A5D1654001DF495 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B697CD1A5D1654001DF495 /* GameScene.swift */; };
-		E8B697D01A5D1654001DF495 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B697CF1A5D1654001DF495 /* GameViewController.swift */; };
-		E8B697D31A5D1654001DF495 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8B697D11A5D1654001DF495 /* Main.storyboard */; };
-		E8B697D51A5D1654001DF495 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8B697D41A5D1654001DF495 /* Images.xcassets */; };
-		E8B697D81A5D1654001DF495 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8B697D61A5D1654001DF495 /* LaunchScreen.xib */; };
-		E8B697E41A5D1654001DF495 /* tripping_hipsterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B697E31A5D1654001DF495 /* tripping_hipsterTests.swift */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		E8B697DE1A5D1654001DF495 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E8B697BC1A5D1654001DF495 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E8B697C31A5D1654001DF495;
-			remoteInfo = "tripping-hipster";
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		0C3995FB1A621C3D00D4D89D /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
-		E8B697C41A5D1654001DF495 /* tripping-hipster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tripping-hipster.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8B697C81A5D1654001DF495 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E8B697C91A5D1654001DF495 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E8B697CB1A5D1654001DF495 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		E8B697CD1A5D1654001DF495 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		E8B697CF1A5D1654001DF495 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		E8B697D21A5D1654001DF495 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E8B697D41A5D1654001DF495 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		E8B697D71A5D1654001DF495 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		E8B697DD1A5D1654001DF495 /* tripping-hipsterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tripping-hipsterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8B697E21A5D1654001DF495 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E8B697E31A5D1654001DF495 /* tripping_hipsterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripping_hipsterTests.swift; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		E8B697C11A5D1654001DF495 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E8B697DA1A5D1654001DF495 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		E8B697BB1A5D1654001DF495 = {
-			isa = PBXGroup;
-			children = (
-				E8B697C61A5D1654001DF495 /* tripping-hipster */,
-				E8B697E01A5D1654001DF495 /* tripping-hipsterTests */,
-				E8B697C51A5D1654001DF495 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		E8B697C51A5D1654001DF495 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E8B697C41A5D1654001DF495 /* tripping-hipster.app */,
-				E8B697DD1A5D1654001DF495 /* tripping-hipsterTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		E8B697C61A5D1654001DF495 /* tripping-hipster */ = {
-			isa = PBXGroup;
-			children = (
-				E8B697C91A5D1654001DF495 /* AppDelegate.swift */,
-				E8B697CB1A5D1654001DF495 /* GameScene.sks */,
-				E8B697CD1A5D1654001DF495 /* GameScene.swift */,
-				0C3995FB1A621C3D00D4D89D /* GameOverScene.swift */,
-				E8B697CF1A5D1654001DF495 /* GameViewController.swift */,
-				E8B697D11A5D1654001DF495 /* Main.storyboard */,
-				E8B697D41A5D1654001DF495 /* Images.xcassets */,
-				E8B697D61A5D1654001DF495 /* LaunchScreen.xib */,
-				E8B697C71A5D1654001DF495 /* Supporting Files */,
-			);
-			path = "tripping-hipster";
-			sourceTree = "<group>";
-		};
-		E8B697C71A5D1654001DF495 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				E8B697C81A5D1654001DF495 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E8B697E01A5D1654001DF495 /* tripping-hipsterTests */ = {
-			isa = PBXGroup;
-			children = (
-				E8B697E31A5D1654001DF495 /* tripping_hipsterTests.swift */,
-				E8B697E11A5D1654001DF495 /* Supporting Files */,
-			);
-			path = "tripping-hipsterTests";
-			sourceTree = "<group>";
-		};
-		E8B697E11A5D1654001DF495 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				E8B697E21A5D1654001DF495 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		E8B697C31A5D1654001DF495 /* tripping-hipster */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E8B697E71A5D1654001DF495 /* Build configuration list for PBXNativeTarget "tripping-hipster" */;
-			buildPhases = (
-				E8B697C01A5D1654001DF495 /* Sources */,
-				E8B697C11A5D1654001DF495 /* Frameworks */,
-				E8B697C21A5D1654001DF495 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "tripping-hipster";
-			productName = "tripping-hipster";
-			productReference = E8B697C41A5D1654001DF495 /* tripping-hipster.app */;
-			productType = "com.apple.product-type.application";
-		};
-		E8B697DC1A5D1654001DF495 /* tripping-hipsterTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E8B697EA1A5D1654001DF495 /* Build configuration list for PBXNativeTarget "tripping-hipsterTests" */;
-			buildPhases = (
-				E8B697D91A5D1654001DF495 /* Sources */,
-				E8B697DA1A5D1654001DF495 /* Frameworks */,
-				E8B697DB1A5D1654001DF495 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E8B697DF1A5D1654001DF495 /* PBXTargetDependency */,
-			);
-			name = "tripping-hipsterTests";
-			productName = "tripping-hipsterTests";
-			productReference = E8B697DD1A5D1654001DF495 /* tripping-hipsterTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		E8B697BC1A5D1654001DF495 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 0610;
-				ORGANIZATIONNAME = AM;
-				TargetAttributes = {
-					E8B697C31A5D1654001DF495 = {
-						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = QW9239USZ5;
-					};
-					E8B697DC1A5D1654001DF495 = {
-						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = QW9239USZ5;
-						TestTargetID = E8B697C31A5D1654001DF495;
-					};
-				};
-			};
-			buildConfigurationList = E8B697BF1A5D1654001DF495 /* Build configuration list for PBXProject "tripping-hipster" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = E8B697BB1A5D1654001DF495;
-			productRefGroup = E8B697C51A5D1654001DF495 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				E8B697C31A5D1654001DF495 /* tripping-hipster */,
-				E8B697DC1A5D1654001DF495 /* tripping-hipsterTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		E8B697C21A5D1654001DF495 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E8B697D81A5D1654001DF495 /* LaunchScreen.xib in Resources */,
-				E8B697D51A5D1654001DF495 /* Images.xcassets in Resources */,
-				E8B697CC1A5D1654001DF495 /* GameScene.sks in Resources */,
-				E8B697D31A5D1654001DF495 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E8B697DB1A5D1654001DF495 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		E8B697C01A5D1654001DF495 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E8B697CE1A5D1654001DF495 /* GameScene.swift in Sources */,
-				E8B697D01A5D1654001DF495 /* GameViewController.swift in Sources */,
-				0C3995FC1A621C3D00D4D89D /* GameOverScene.swift in Sources */,
-				E8B697CA1A5D1654001DF495 /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E8B697D91A5D1654001DF495 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E8B697E41A5D1654001DF495 /* tripping_hipsterTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		E8B697DF1A5D1654001DF495 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E8B697C31A5D1654001DF495 /* tripping-hipster */;
-			targetProxy = E8B697DE1A5D1654001DF495 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		E8B697D11A5D1654001DF495 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E8B697D21A5D1654001DF495 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E8B697D61A5D1654001DF495 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E8B697D71A5D1654001DF495 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		E8B697E51A5D1654001DF495 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
-		E8B697E61A5D1654001DF495 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		E8B697E81A5D1654001DF495 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "tripping-hipster/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		E8B697E91A5D1654001DF495 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "tripping-hipster/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		E8B697EB1A5D1654001DF495 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "tripping-hipsterTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tripping-hipster.app/tripping-hipster";
-			};
-			name = Debug;
-		};
-		E8B697EC1A5D1654001DF495 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "tripping-hipsterTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tripping-hipster.app/tripping-hipster";
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		E8B697BF1A5D1654001DF495 /* Build configuration list for PBXProject "tripping-hipster" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E8B697E51A5D1654001DF495 /* Debug */,
-				E8B697E61A5D1654001DF495 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E8B697E71A5D1654001DF495 /* Build configuration list for PBXNativeTarget "tripping-hipster" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E8B697E81A5D1654001DF495 /* Debug */,
-				E8B697E91A5D1654001DF495 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E8B697EA1A5D1654001DF495 /* Build configuration list for PBXNativeTarget "tripping-hipsterTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E8B697EB1A5D1654001DF495 /* Debug */,
-				E8B697EC1A5D1654001DF495 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = E8B697BC1A5D1654001DF495 /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>0C3995FB1A621C3D00D4D89D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>GameOverScene.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0C3995FC1A621C3D00D4D89D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0C3995FB1A621C3D00D4D89D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>62A0675E8E6FBC53DAC614BF</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-tripping-hipster/Pods-tripping-hipster-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>66B7AF3A814B9F97A9A8A24F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E30F92C5742616C745CF13CF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>870B1E4804127CA543893EFB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-tripping-hipster.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-tripping-hipster/Pods-tripping-hipster.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D45F66E703FA1E850888C11A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E30F92C5742616C745CF13CF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D4AC5EF519BC3F281384C4A3</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-tripping-hipster.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-tripping-hipster/Pods-tripping-hipster.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D8D50B74ED155757D68B2610</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>870B1E4804127CA543893EFB</string>
+				<string>D4AC5EF519BC3F281384C4A3</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E30F92C5742616C745CF13CF</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-tripping-hipster.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>E8B697BB1A5D1654001DF495</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E8B697C61A5D1654001DF495</string>
+				<string>E8B697E01A5D1654001DF495</string>
+				<string>E8B697C51A5D1654001DF495</string>
+				<string>D8D50B74ED155757D68B2610</string>
+				<string>66B7AF3A814B9F97A9A8A24F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E8B697BC1A5D1654001DF495</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>0610</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>AM</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>E8B697C31A5D1654001DF495</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>6.1.1</string>
+						<key>DevelopmentTeam</key>
+						<string>QW9239USZ5</string>
+					</dict>
+					<key>E8B697DC1A5D1654001DF495</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>6.1.1</string>
+						<key>DevelopmentTeam</key>
+						<string>QW9239USZ5</string>
+						<key>TestTargetID</key>
+						<string>E8B697C31A5D1654001DF495</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>E8B697BF1A5D1654001DF495</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>E8B697BB1A5D1654001DF495</string>
+			<key>productRefGroup</key>
+			<string>E8B697C51A5D1654001DF495</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>E8B697C31A5D1654001DF495</string>
+				<string>E8B697DC1A5D1654001DF495</string>
+			</array>
+		</dict>
+		<key>E8B697BF1A5D1654001DF495</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>E8B697E51A5D1654001DF495</string>
+				<string>E8B697E61A5D1654001DF495</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>E8B697C01A5D1654001DF495</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>E8B697CE1A5D1654001DF495</string>
+				<string>E8B697D01A5D1654001DF495</string>
+				<string>0C3995FC1A621C3D00D4D89D</string>
+				<string>E8B697CA1A5D1654001DF495</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>E8B697C11A5D1654001DF495</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>D45F66E703FA1E850888C11A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>E8B697C21A5D1654001DF495</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>E8B697D81A5D1654001DF495</string>
+				<string>E8B697D51A5D1654001DF495</string>
+				<string>E8B697CC1A5D1654001DF495</string>
+				<string>E8B697D31A5D1654001DF495</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>E8B697C31A5D1654001DF495</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>E8B697E71A5D1654001DF495</string>
+			<key>buildPhases</key>
+			<array>
+				<string>FF5A8328BD60C707D4B6C522</string>
+				<string>E8B697C01A5D1654001DF495</string>
+				<string>E8B697C11A5D1654001DF495</string>
+				<string>E8B697C21A5D1654001DF495</string>
+				<string>62A0675E8E6FBC53DAC614BF</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>tripping-hipster</string>
+			<key>productName</key>
+			<string>tripping-hipster</string>
+			<key>productReference</key>
+			<string>E8B697C41A5D1654001DF495</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>E8B697C41A5D1654001DF495</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>tripping-hipster.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>E8B697C51A5D1654001DF495</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E8B697C41A5D1654001DF495</string>
+				<string>E8B697DD1A5D1654001DF495</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E8B697C61A5D1654001DF495</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E8B697C91A5D1654001DF495</string>
+				<string>E8B697CB1A5D1654001DF495</string>
+				<string>E8B697CD1A5D1654001DF495</string>
+				<string>0C3995FB1A621C3D00D4D89D</string>
+				<string>E8B697CF1A5D1654001DF495</string>
+				<string>E8B697D11A5D1654001DF495</string>
+				<string>E8B697D41A5D1654001DF495</string>
+				<string>E8B697D61A5D1654001DF495</string>
+				<string>E8B697C71A5D1654001DF495</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>tripping-hipster</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E8B697C71A5D1654001DF495</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E8B697C81A5D1654001DF495</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E8B697C81A5D1654001DF495</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E8B697C91A5D1654001DF495</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AppDelegate.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E8B697CA1A5D1654001DF495</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E8B697C91A5D1654001DF495</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E8B697CB1A5D1654001DF495</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.sks</string>
+			<key>path</key>
+			<string>GameScene.sks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E8B697CC1A5D1654001DF495</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E8B697CB1A5D1654001DF495</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E8B697CD1A5D1654001DF495</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>GameScene.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E8B697CE1A5D1654001DF495</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E8B697CD1A5D1654001DF495</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E8B697CF1A5D1654001DF495</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>GameViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E8B697D01A5D1654001DF495</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E8B697CF1A5D1654001DF495</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E8B697D11A5D1654001DF495</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E8B697D21A5D1654001DF495</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E8B697D21A5D1654001DF495</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E8B697D31A5D1654001DF495</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E8B697D11A5D1654001DF495</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E8B697D41A5D1654001DF495</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Images.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E8B697D51A5D1654001DF495</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E8B697D41A5D1654001DF495</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E8B697D61A5D1654001DF495</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E8B697D71A5D1654001DF495</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>LaunchScreen.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E8B697D71A5D1654001DF495</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/LaunchScreen.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E8B697D81A5D1654001DF495</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E8B697D61A5D1654001DF495</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E8B697D91A5D1654001DF495</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>E8B697E41A5D1654001DF495</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>E8B697DA1A5D1654001DF495</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>E8B697DB1A5D1654001DF495</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>E8B697DC1A5D1654001DF495</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>E8B697EA1A5D1654001DF495</string>
+			<key>buildPhases</key>
+			<array>
+				<string>E8B697D91A5D1654001DF495</string>
+				<string>E8B697DA1A5D1654001DF495</string>
+				<string>E8B697DB1A5D1654001DF495</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>E8B697DF1A5D1654001DF495</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>tripping-hipsterTests</string>
+			<key>productName</key>
+			<string>tripping-hipsterTests</string>
+			<key>productReference</key>
+			<string>E8B697DD1A5D1654001DF495</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>E8B697DD1A5D1654001DF495</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>tripping-hipsterTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>E8B697DE1A5D1654001DF495</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>E8B697BC1A5D1654001DF495</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>E8B697C31A5D1654001DF495</string>
+			<key>remoteInfo</key>
+			<string>tripping-hipster</string>
+		</dict>
+		<key>E8B697DF1A5D1654001DF495</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>E8B697C31A5D1654001DF495</string>
+			<key>targetProxy</key>
+			<string>E8B697DE1A5D1654001DF495</string>
+		</dict>
+		<key>E8B697E01A5D1654001DF495</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E8B697E31A5D1654001DF495</string>
+				<string>E8B697E11A5D1654001DF495</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>tripping-hipsterTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E8B697E11A5D1654001DF495</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E8B697E21A5D1654001DF495</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E8B697E21A5D1654001DF495</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E8B697E31A5D1654001DF495</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>tripping_hipsterTests.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E8B697E41A5D1654001DF495</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E8B697E31A5D1654001DF495</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E8B697E51A5D1654001DF495</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.1</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>E8B697E61A5D1654001DF495</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.1</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>E8B697E71A5D1654001DF495</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>E8B697E81A5D1654001DF495</string>
+				<string>E8B697E91A5D1654001DF495</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>E8B697E81A5D1654001DF495</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>870B1E4804127CA543893EFB</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>INFOPLIST_FILE</key>
+				<string>tripping-hipster/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>E8B697E91A5D1654001DF495</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>D4AC5EF519BC3F281384C4A3</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>INFOPLIST_FILE</key>
+				<string>tripping-hipster/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>E8B697EA1A5D1654001DF495</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>E8B697EB1A5D1654001DF495</string>
+				<string>E8B697EC1A5D1654001DF495</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>E8B697EB1A5D1654001DF495</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Developer</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>tripping-hipsterTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PROVISIONING_PROFILE</key>
+				<string></string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/tripping-hipster.app/tripping-hipster</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>E8B697EC1A5D1654001DF495</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Developer</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>tripping-hipsterTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PROVISIONING_PROFILE</key>
+				<string></string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/tripping-hipster.app/tripping-hipster</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>FF5A8328BD60C707D4B6C522</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>E8B697BC1A5D1654001DF495</string>
+</dict>
+</plist>
