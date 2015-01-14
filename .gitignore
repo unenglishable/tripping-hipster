@@ -24,4 +24,4 @@ tripping-hipster/Images.xcassets/AppIcon.appiconset/*.png
 # you should judge for yourself, the pros and cons are mentioned at:
 # http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control
 #
-# Pods/
+Pods/
